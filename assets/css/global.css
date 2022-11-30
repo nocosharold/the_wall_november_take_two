@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: url('../fonts/Roboto-Italic.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../fonts/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+body {
+  background-color: #2C2D34;
+}
+a {
+  transition: all 0.21s ease-in-out;
+}
+a:hover {
+  opacity: 0.8;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #FFF !important;
+  -webkit-box-shadow: 0 0 0 40rem #2C2D34 inset;
+  border: 1px solid #00A3FF;
+  transition: background-color 5000s ease-in-out 0s;
+}

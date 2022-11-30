@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Harold Nocos">
+    <meta name="description" content="The Wall is a fun place to keep up: with what's going on around places, with your friends and acquaintances, with interesting stories, and thoughts of yourself and the community.">
+    <title>The Wall | Timeline Page</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/timeline.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" id="the_wall_logo"><img src="../assets/images/the_wall_small_logo.svg" alt="The Wall logo"></a>
+        <span class="flex_space"></span>
+        <span id="profile_name">Harold Nocos</span>
+        <a href="index.html" id="log_out_btn">Log Out</a>
+    </nav>
+    <main>
+        <div class="greet_container">
+            <h1>Hello Harold,
+                <span>Welcome to V88 Forum Dashboard</span>
+            </h1>
+        </div>
+        <div class="post_container editor">
+            <form action="./timeline.html" id="post_form">
+                <textarea name="post_text_field" id="post_text_field" placeholder="Post your Topic..."></textarea>
+                <button type="submit" class="post_btn">Post</button>
+            </form>
+        </div>
+        <p id="title">Recent Forums</p>
+        <div id="forum_container">
+            <div id="no_post">
+                <p>No post yet.</p>
+            </div>
+            <div class="topic_container hidden">
+                <div class="topic_block">
+                    <p class="topic_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                    <div class="topic_details_action_container details_btn">
+                        <div class="topic_details">Harold Nocos (few seconds ago) | 0 Responses</div>
+                        <div class="topic_action_btn action_btn">
+                            <button type="button" class="edit_topic_btn edit_btn"></button>
+                            <div class="delete_btn_container">
+                                <button class="delete_topic_btn delete_btn"></button>
+                                <p class="confirm_text">Confirm Delete?
+                                    <button type="button" class="confirm_btn no_btn">No</button>
+                                    <button type="button" class="confirm_btn topic_yes_btn">Yes</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit_topic_container editor hidden">
+                    <form action="./timeline.html" class="edit_topic_container_form">
+                        <textarea name="edit_topic_container_field" class="edit_topic_container_field"></textarea>
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+                <div class="create_response_container editor">
+                    <form action="./timeline.html" class="create_response_form">
+                        <textarea name="create_response_field" class="create_response_field" placeholder="Post your Topic..."></textarea>
+                        <button type="submit" class="btn_comment">Comment</button>
+                    </form>
+                </div>
+                <div class="response_container">
+                    <div class="response_wrapper hidden">
+                        <div class="response_block">
+                            <p class="response_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <div class="topic_details_action_container details_btn">
+                                <p class="response_details">Harold Nocos (few seconds ago)</p>
+                                <div class="response_action_btn action_btn">
+                                    <button type="button" class="edit_response_btn edit_btn"></button>
+                                    <div class="delete_btn_container">
+                                        <button type="button" class="delete_response_btn delete_btn"></button>
+                                        <p class="confirm_text">Confirm Delete?
+                                            <button type="button" class="confirm_btn no_btn">No</button>
+                                            <button type="button" class="confirm_btn response_yes_btn">Yes</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit_response_container editor hidden">
+                            <form action="./timeline.html" class="edit_response_form editor">
+                                <textarea name="edit_response_field" class="edit_response_field" placeholder="Post your Topic..."></textarea>
+                                <button type="submit" class="save_response_btn">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/js/timeline.js"></script>
+</body>
+</html>

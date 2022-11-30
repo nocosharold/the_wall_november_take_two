@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Harold Nocos">
+    <meta name="description" content="The Wall is a fun place to keep up: with what's going on around places, with your friends and acquaintances, with interesting stories, and thoughts of yourself and the community.">
+    <title>The Wall | Access Page</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+<body>
+    <div class="container" id="sign_up">
+        <div class="form_container">
+            <div class="form_header">
+                <img src="../assets/images/the_wall_icon.svg" alt="The Wall Icon">
+                <h1>Welcome
+                    <span>Register a new account.</span>
+                </h1>
+            </div>
+            <form action="../views/timeline.html" id="sign_up_form" class="form" method="post">
+                <div class="col_2">
+                    <label for="first_name">First Name
+                        <input type="text" name="first_name" class="form_input_field" id="first_name">
+                    </label>
+                    <label for="last_name">Last Name
+                        <input type="text" name="last_name" class="form_input_field" id="last_name">
+                    </label>
+                </div>
+                <label for="signup_email" class="row">Email
+                    <input type="text" class="form_input_field" id="signup_email" name="signup_email">
+                </label>
+                <label for="signup_password" class="row">Password
+                    <input type="password" class="form_input_field" id="signup_password" name="signup_password">
+                </label>
+                <button class="form_btn" type="submit">Sign Up</button>
+                <p class="access_text">Already have an account? <a id="show_signin" class="select_access_btn" href="#">Sign In</a></p>
+            </form>
+        </div>
+        <div class="banner_container">
+            <img src="../assets/images/the_wall_big_logo.svg" alt="The Wall Big Logo">
+        </div>
+    </div>
+    <div class="container hidden" id="sign_in">
+        <div class="form_container">
+            <div class="form_header">
+                <img src="../assets/images/the_wall_icon.svg" alt="The Wall Icon">
+                <h1>Welcome
+                    <span>Register a new account.</span>
+                </h1>
+            </div>
+            <form action="../views/timeline.html" id="sign_in_form" class="form" method="post">
+                <label for="email" class="row">Email
+                    <input type="text" class="form_input_field" id="email" name="email">
+                </label>
+                <label for="password" class="row">Password
+                    <input type="password" class="form_input_field" id="password" name="password">
+                </label>
+                <button class="form_btn" type="submit">Sign In</button>
+                <p class="access_text">Don’t have an account? <a id="show_signup" class="select_access_btn" href="#">Sign up</a></p>
+            </form>
+        </div>
+        <div class="banner_container">
+            <img src="../assets/images/the_wall_big_logo.svg" alt="The Wall Big Logo">
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+</body>
+</html>

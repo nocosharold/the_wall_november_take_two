@@ -1,0 +1,350 @@
+@import url(./global.less);
+
+nav{
+    align-items: center;
+    background-color: @wall_bg_black;
+    color: @wall_white;
+    display: flex;
+    font: 14px/16px @roboto_regular;
+    height: 62px;
+    justify-content: space-between;
+    padding: 0 25px;
+    .flex_space{
+        flex: 1;
+    }
+    #profile_name{
+        border-right: 1px solid @wall_gray;
+        height: 100%;
+        padding: 24px 26px;
+    }
+    #log_out_btn{
+        color: @wall_white;
+        padding-left: 26px;
+        text-decoration: none;
+        &::before{
+            background: url("../images/the_wall_sprite_icon.svg") no-repeat -84px 0;
+            content: "";
+            display: inline-block;
+            height: 13px;
+            margin-right: 10px;
+            vertical-align: top;
+            width: 13px;
+        }
+    }
+}
+
+main{
+    margin: 48px auto 0;
+    max-width: 978px;
+    .greet_container{
+        margin-bottom: 56px;
+        h1{
+            color: @wall_white;
+            font: 21px/25px @roboto_regular;
+            span{
+                color: @wall_font;
+                display: block;
+                font: 18px/21px @roboto_regular;
+                margin-top: 7px;
+            }
+        }
+    }
+    .post_container{
+        #post_form{
+            margin-bottom: 57px;
+        }
+    }
+    .editor{
+        background-color: @wall_gray;
+        border-radius: 10px;
+        form{
+            align-items: center;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            padding: 0 20px;
+            &.active{
+                border: 1px solid @wall_primary;
+            }
+            &.input_error{
+                border: 1px solid @wall_error;
+            }
+            textarea{
+                background-color: @wall_gray;
+                border: 1px solid transparent;
+                color: @wall_white;
+                font: 18px/25px @roboto_regular;
+                height: 38px;
+                margin: 28px 0 11px;
+                max-height: 500px;
+                min-height: 38px;
+                outline: none;
+                padding-right: 20px;
+                position: relative;
+                resize: vertical;
+                width: 100%;
+            }
+            button{
+                background-color: @wall_primary;
+                border-radius: 9px;
+                border: none;
+                color: @wall_white;
+                cursor: pointer;
+                font: 14px/40px @roboto_regular;
+                min-width: 100px;
+                transition: all 0.21s ease-in-out;
+                &:hover{
+                    background-color: @wall_dark_blue;
+                }
+            }
+        }
+    }
+    .edit_topic_container{
+        &.editor{
+            form{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    #title{
+        color: @wall_white;
+        font: 16px/19px @roboto_regular;
+        margin-bottom: 17px;
+    }
+    #no_post{
+        background-color: transparent;
+        border-radius: 9px;
+        border: 1px dashed @wall_dashed_border;
+        color: @wall_no_post_text;
+        font: 18px/19px @roboto_regular;
+        padding: 38px 0;
+        text-align: center;
+    }
+    #forum_container{
+        .topic_container{
+            background-color: @wall_bg_black;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            padding: 24px 30px 30px;
+            .topic_block{
+                .delete_container{
+                    display: flex;
+                    align-items: center;
+                    &.active{
+                        .delete_topic_btn{
+                            pointer-events: none;
+                        }
+                        .confirm_text{
+                            display: flex;
+                        }
+                    }
+                    .confirm_text{
+                        display: none;
+                    }
+                }
+            }
+            .topic_text{
+                color: @wall_white;
+                font: 16px/25px @roboto_italic;
+                margin-bottom: 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: calc(100% - 102px);
+            }
+            .topic_block,
+            .response_block{
+                .details_btn{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    .topic_details,
+                    .response_details{
+                        align-items: center;
+                        color: @wall_details;
+                        display: flex;
+                        font: 14px/16px @roboto_regular;
+                        justify-content: space-between;
+                    }
+                }
+                &:hover{
+                    .action_btn{
+                        transition: all 0.21s ease-in-out;
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+                .action_btn{
+                    display: flex;
+                    align-items: center;
+                    opacity: 0;
+                    pointer-events: none;
+                    gap: 6px;
+                    .edit_btn{
+                        background-color: @wall_btn_bg;
+                        border-radius: 4px;
+                        border: 1px solid @wall_btn_border;
+                        cursor: pointer;
+                        height: 29px;
+                        transition: all 0.21s ease-in-out;
+                        width: 29px;
+                        &::after{
+                            background: url("../images/the_wall_sprite_icon.svg") no-repeat;
+                            background-position: 0 0;
+                            content: "";
+                            display: inline-block;
+                            height: 12px;
+                            width: 12px;
+                        }
+                        &:hover{
+                            background-color: @wall_btn_bg_light;
+                            border: 1px solid @wall_white;
+                            &::after{
+                                background-position: -42px 0;
+                            }
+                        }
+                    }
+                    .delete_btn_container{
+                        align-items: center;
+                        background-color: @wall_btn_bg;
+                        border-radius: 4px;
+                        border: 1px solid @wall_btn_border;
+                        display: flex;
+                        .delete_btn{
+                            background-color: @wall_btn_bg;
+                            border-radius: 4px;
+                            border: none;
+                            cursor: pointer;
+                            height: 27px;
+                            outline: none;
+                            transition: all 0.21s ease-in-out;
+                            width: 28px;
+                            &::after{
+                                background: url("../images//the_wall_sprite_icon.svg") no-repeat -21px 0;
+                                content: "";
+                                display: inline-block;
+                                height: 12px;
+                                width: 12px;
+                            }
+                            &:hover{
+                                background-color: @wall_btn_bg_light;
+                                border: 1px solid @wall_white;
+                                &::after{
+                                    background-position: -63px 0;
+                                }
+                            }
+                        }
+                        .confirm_text{
+                            color: @wall_white;
+                            display: none;
+                            font: 10px/12px @roboto_medium;
+                            gap: 8px;
+                            margin: 0 8px;
+                            .confirm_btn{
+                                background-color: transparent;
+                                border: none;
+                                cursor: pointer;
+                                font: 10px/12px @roboto_medium;
+                                transition: all 0.21s ease-in-out;
+                                &:hover{
+                                    opacity: 0.8;
+                                }
+                            }
+                            .no_btn{
+                                color: @wall_font;
+                            }
+                            .topic_yes_btn,
+                            .response_yes_btn{
+                                color: @wall_yes_btn;
+                            }
+                        }
+                        &.active{
+                            .delete_btn{
+                                border-radius: 0;
+                                border-right: 1px solid @wall_btn_border;
+                                pointer-events: none;
+                            }
+                            .confirm_text{
+                                display: flex !important;
+                            }
+                        }
+                    }
+                }
+                .response_text{
+                    color: @wall_reply_text;
+                    font: 16px/25px @roboto_italic;
+                    margin-bottom: 5px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: calc(100% - 102px);
+                }
+            }
+            .response_wrapper{
+                .response_block{
+                    margin-top: 30px;
+                    .delete_container{
+                        display: flex;
+                        align-items: center;
+                        &.active{
+                            .delete_response_btn{
+                                pointer-events: none;
+                            }
+                            .confirm_text{
+                                display: flex;
+                            }
+                        }
+                        .confirm_text{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .edit_response_container{
+                .edit_response_form{
+                    margin-bottom: 0;
+                }
+            }
+            .create_response_container{
+                .create_response_form{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.hidden{
+    display: none !important;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar{
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb{
+    background-color: @wall_comment;
+    border-radius: 8px;
+    width: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+    main{
+        margin: 48px 35px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #profile_name{
+        display: none;
+    }
+    #log_out_btn{
+        color: transparent !important;
+        padding: 14px 0 0 26px;
+        width: 35px;
+    }
+}

@@ -1,0 +1,152 @@
+@import url(./global.less);
+
+body{
+    padding: 35px;
+}
+
+.container{
+    background-color: @wall_form_bg;
+    border-radius: 20px;
+    column-gap: 78px;
+    display: flex;
+    margin: 187px auto 0;
+    max-width: 876px;
+    padding: 74px 0 71px 78px;
+    position: relative;
+    &.hidden {
+        display: none;
+    }
+    .form_header{
+        display: flex;
+        margin-bottom: 46px;
+        img{
+            margin-right: 30px;
+        }
+        h1{
+            color: @wall_white;
+            font: 21px/25px @roboto_regular;
+        }
+        span{
+            color: @wall_font;
+            display: block;
+            font: 18px/21px @roboto_regular;
+            margin-top: 4px;
+        }
+    }
+    label{
+        color: @wall_font;
+        font: 14px/16px @roboto_medium;
+    }
+
+    .col_2{
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        label{
+            width: 50%;
+        }
+    }
+
+    .row{
+        display: block;
+        margin-bottom: 18px;
+    }
+
+    .form_input_field{
+        background-color: @wall_bg;
+        border-radius: 9px;
+        border: none;
+        color: @wall_white;
+        display: block;
+        font: 16px/16px @roboto_regular;
+        height: 60px;
+        margin-top: 10px;
+        padding: 24px 20px;
+        width: 100%;
+
+        &:focus,
+        &:focus-visible{
+            border: 1px solid @wall_primary !important;
+            outline: none;
+        }
+
+        &.input_error{
+            border: 1px solid @wall_error;
+        }
+    }
+
+    .form_btn{
+        background-color: @wall_primary;
+        border-radius: 9px;
+        border: none;
+        color: @wall_white;
+        cursor: pointer;
+        font: 21px/25px @roboto_bold;
+        height: 60px;
+        margin: 30px 0 38px;
+        outline: none;
+        transition: all 0.21s ease-in-out;
+        width: 100%;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+
+    .access_text{
+        color: @wall_font;
+        font: 18px/21px @roboto_regular;
+        text-align: center;
+        a{
+            color: @wall_primary;
+            text-decoration: none;
+        }
+    }
+    .form_container{
+        width: calc(100% - 283px);
+    }
+
+    .banner_container{
+        background-color: #3B3C43;
+        background: url("../images/the_wall_banner.png") no-repeat;
+        border-radius: 0 20px 20px 0;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 205px;
+        img{
+            margin: 74px 0 0 51px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        padding-right: 78px;
+        .col_2{
+            display: block;
+            #first_name{
+                margin-bottom: 12px;
+            }
+        }
+        .form_container{
+            width: 100%;
+        }
+        .banner_container{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .container{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .container {
+        display: block;
+        padding: 35px;
+    }
+}
